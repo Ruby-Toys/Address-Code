@@ -27,6 +27,20 @@ address-util:
 
 <br>
 
+### API
+- AddressUtil.getAddressListByCSV()
+  - CSV 파일로부터 법정동 관련 데이터를 조회
+- AddressUtil.getSidoList()
+  - CSV 파일로부터 시/도 목록을 조회
+- AddressUtil.getSigunguList(String sido)
+  - CSV 파일로부터 시/도 에 해당하는 시/군/구 목록을 조회
+- AddressUtil.getEupmyeondongList(String sido, String sigungu)
+  - CSV 파일로부터 시/도, 시/군/구 에 해당하는 읍/면/동 목록을 조회
+- AddressUtil.getRiList(String sido, String sigungu, String eupmyeondong)
+  - CSV 파일로부터 시/도, 시/군/구, 읍/면/동 에 해당하는 리 목록을 조회
+
+<br>
+
 ### Example
 ```java
 @Slf4j
