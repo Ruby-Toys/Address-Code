@@ -16,7 +16,7 @@ class AddressUtilTest {
 
     @Autowired
     AddressUtil addressUtil;
-    
+
     @Test
     void setUp() throws IOException {
         List<Address> addressListByCSV = addressUtil.getAddressListByCSV();
@@ -25,5 +25,4 @@ class AddressUtilTest {
         );
         log.info("총 주소 개수 = {}", addressListByCSV.size());
     }
-
 }
