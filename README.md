@@ -1,5 +1,7 @@
 ## Address Code Library
 - CSV 파일 기반 법정동 공공 데이터 추출 라이브러리
+  - 법정동 파일 다운로드
+    - https://www.data.go.kr/data/15063424/fileData.do?recommendDataYn=Y
 
 <br><br>
 
