@@ -13,13 +13,16 @@ dependencies {
 ```
 ```yaml
 address-util:
-  file-path:          # ClassPathResource Path
-  start-row:          # 읽을 데이터의 시작 Row
-  bcode-col:          # 법정동 코드 Column Index
-  sido-col:           # 시/도 Column Index
-  sigungu-col:        # 시/군/구 Column Index
-  eupmyeondong-col:   # 읍/면/동 Column Index
-  ri-col:             # 리 Column Index
+  file-path:            # ClassPathResource Path
+  row:
+    start-row:          # 읽을 데이터의 시작 Row
+    end-row:            # 읽을 데이터의 끝 Row. 생략 가능
+  column:
+    bcode:              # 법정동 코드 Column Index
+    sido:               # 시/도 Column Index
+    sigungu:            # 시/군/구 Column Index
+    eupmyeondong:       # 읍/면/동 Column Index
+    ri:                 # 리 Column Index
 ```
 
 <br>

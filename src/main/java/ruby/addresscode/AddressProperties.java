@@ -10,10 +10,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class AddressProperties {
 
     private final String filePath;
-    private final int startRow;
-    private final int bcodeCol;
-    private final int sidoCol;
-    private final int sigunguCol;
-    private final int eupmyeondongCol;
-    private final int riCol;
+    private final Row row;
+    private final Column column;
+    
+    record Row(Integer startRow, Integer endRow) {
+        Row(Integer startRow, Integer endRow) {
+            this.startRow = startRow == null ? 0 : startRow;
+            this.endRow = endRow;
+        }
+    }
+
+    record Column(int bcode, int sido, int sigungu, int eupmyeondong, int ri) {}
 }
