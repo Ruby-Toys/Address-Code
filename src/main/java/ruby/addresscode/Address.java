@@ -17,29 +17,33 @@ public class Address {
 
     @Builder
     public Address(String bcode, String sido, String sigungu, String eupmyeondong, String ri) {
-        this.bcode = (bcode != null && !bcode.isBlank()) ? bcode : null;
-        this.sido = (sido != null && !sido.isBlank()) ? sido : null;
-        this.sigungu = (sigungu != null && !sigungu.isBlank()) ? sigungu : null;
-        this.eupmyeondong = (eupmyeondong != null && !eupmyeondong.isBlank()) ? eupmyeondong : null;
-        this.ri = (ri != null && !ri.isBlank()) ? ri : null;
+        this.bcode = hasValue(bcode) ? bcode : null;
+        this.sido = hasValue(sido) ? sido : null;
+        this.sigungu = hasValue(sigungu) ? sigungu : null;
+        this.eupmyeondong = hasValue(eupmyeondong) ? eupmyeondong : null;
+        this.ri = hasValue(ri) ? ri : null;
         this.fullAddress = createFullAddress();
     }
 
     private String createFullAddress() {
         StringBuilder builder = new StringBuilder();
-        if (sido != null && !sido.isBlank()) {
+        if (hasValue(sido)) {
             builder.append(sido).append(" ");
         }
-        if (sigungu != null && !sigungu.isBlank()) {
+        if (hasValue(sigungu)) {
             builder.append(sigungu).append(" ");
         }
-        if (eupmyeondong != null && !eupmyeondong.isBlank()) {
+        if (hasValue(eupmyeondong)) {
             builder.append(eupmyeondong).append(" ");
         }
-        if (ri != null && !ri.isBlank()) {
+        if (hasValue(ri)) {
             builder.append(ri);
         }
 
         return builder.toString();
+    }
+
+    private boolean hasValue(String value) {
+        return value != null && !value.isBlank();
     }
 }

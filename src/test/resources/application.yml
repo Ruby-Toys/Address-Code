@@ -1,9 +1,11 @@
 address-util:
   file-path: "addressCode-data.csv"
-  start-row: 0
-  bcode-col: 0
-  sido-col: 1
-  sigungu-col: 2
-  eupmyeondong-col: 3
-  ri-col: 4
+  row:
+    start-row: 1
+  column:
+    bcode: 0
+    sido: 1
+    sigungu: 2
+    eupmyeondong: 3
+    ri: 4
 
